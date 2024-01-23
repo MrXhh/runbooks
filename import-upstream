@@ -9,7 +9,7 @@ import tempfile
 from typing import NamedTuple
 
 TOOLS = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'tools')
-VERSION_RE = re.compile(r'^(\d+\.\d+\.\d+)((?:a|b|rc)\d+)?$')
+VERSION_RE = re.compile(r'^(\d+\.\d+\.\d+)_?((?:a|b|rc)\d+)?$')
 
 
 class Version(NamedTuple):
