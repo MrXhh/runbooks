@@ -23,6 +23,8 @@ def main() -> NoReturn:
         '--env', f'DEBEMAIL={email}',
         *sys.argv[1:],
     )
+
+    print(f'【docker-run】--cmd: {cmd[0]} {cmd}')
     os.execvp(cmd[0], cmd)
 
 

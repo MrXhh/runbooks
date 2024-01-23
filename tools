@@ -34,6 +34,8 @@ def main() -> NoReturn:
         *(f'--volume={volume}' for volume in args.volumes),
         'ghcr.io/deadsnakes/tools', *rest,
     )
+
+    print(f'【tools】--cmd: {cmd[0]} {cmd}')
     os.execvp(cmd[0], cmd)
 
 
